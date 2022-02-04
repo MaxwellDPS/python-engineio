@@ -235,6 +235,7 @@ class Socket(object):
                     self.server.logger.info(
                         '%s: Unexpected error "%s", closing connection',
                         self.sid, str(e))
+                raise(e)
                 break
             if p is None:
                 # connection closed by client
